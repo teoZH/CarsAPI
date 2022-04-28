@@ -4,7 +4,7 @@ celerybeat.pid
 celerybeat-*
 
 # Assets
-media/
+# media/
 static/
 
 # Editors
