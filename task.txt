@@ -1,0 +1,40 @@
+Python Junior Task
+
+Create a REST API for cars. It should contain accounts, CarBrand, UserCar, and CarModels. Each user has to be extended by default Django abstract class and should contain a few more columns (for your choice). Each car object contains relations to the user and CarBrand. Each CarModel contains relation to CarBrand. It is all your decision how you will distribute models to different apps. Please make the API URLs with filters (custom typed). All models should be with soft delete.
+
+Models fields:
+CarBrand [name, created_at, deleted_at]
+CarModel [car_brand, name, created_at, update_at]
+UserCar [user, car_brand, car_model, first_reg, odometer, created_at, deleted_at]
+
+Auth:
+Please extend the default Django user class and add some custom fields. Create login, register functionality. User default Django permission classes.
+
+
+REST API for CARS:
+
+	Database: PostgreSQL
+
+	
+	Accounts app:
+		''' Please extend the default Django user class and add some custom fields. Create login, register functionality. User default Django permission classes. '''
+
+		----Model Name: MainProfile: additional fields - email, image
+
+
+	Main app:
+		Models:
+			--CarBrand --- fields: [name, created_at, deleted_at]
+
+			--CarModel --- fields: [car_brand, name, created_at, update_at]
+			"""car_brand field relation to CarBrand"""
+
+			--UserCar ---- fields: [user, car_brand, car_model, first_reg, odometer, created_at, deleted_at]
+			"""user_field relation to MainProfile"""
+			"""car_brand_field relation to CarBrand"""
+			"""car_model_field relation to CarModel"""
+
+
+	Additional functionallity: Please make the API URLs with filters (custom typed). All models should be with soft delete.  ------- Django Filters!
+
+		
